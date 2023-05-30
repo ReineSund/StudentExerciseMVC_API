@@ -1,0 +1,19 @@
+@model List<StudentExerciseMVC_API.Models.CoctailViewModel>
+
+<h1>Coctails</h1>
+<p>This is the index page of the Coctail Controller.</p>
+
+<table class="table table-striped">
+  <th>ID</th>
+  <th>Name</th>
+  <th>Picture</th>
+    @foreach (var coctail in Model)
+    {
+        <tr>
+          <td>@coctail.idDrink</td>
+            <td>@coctail.strDrink</td>
+            <td><img src="@coctail.strDrinkThumb" width="100" height="100" /></td>
+        </tr>
+    }
+
+</table>

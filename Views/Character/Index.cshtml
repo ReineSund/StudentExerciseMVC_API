@@ -1,0 +1,17 @@
+@model List<StudentExerciseMVC_API.Models.CharacterViewModel>
+
+<h1>Characters</h1>
+<p>This is the index page of the Character Controller.</p>
+
+<h1>Character</h1>
+<table class="table">
+  <th>Name</th>
+  <th>City</th>
+    @foreach (var character in Model)
+    {
+      <tr>
+        <td>@character.name</td>
+        <td>@character.city</td>
+      </tr>      
+    }
+</table>
